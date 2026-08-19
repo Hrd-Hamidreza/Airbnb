@@ -1,0 +1,5 @@
+body {
+    @apply p-0 m-0;
+    font-family: "Inter", sans-serif;
+    direction: ltr;
+}
