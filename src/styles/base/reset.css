@@ -2,4 +2,5 @@ body {
     @apply p-0 m-0;
     font-family: "Inter", sans-serif;
     direction: ltr;
+    background-color: rgb(236, 236, 236);
 }
