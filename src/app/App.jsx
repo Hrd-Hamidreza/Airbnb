@@ -1,5 +1,5 @@
 //! ---------------------------------------- Import
-import Router from "/src/routes/Router";
+import Router from "@/routes/Router";
 //! ---------------------------------------- Component (App)
 function App() {
   return <Router />;

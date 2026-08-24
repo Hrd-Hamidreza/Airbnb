@@ -1,43 +1,43 @@
 //! ---------------------------------------- Import
 //! -------------------- Exclusive
-import MainLayout from "@/layouts/MainLayout";
+import MainLayout from "@/layouts/MainLayout/MainLayout";
 //! Admin
-import AdminBookings from "@/pages/Exclusive/Admin/AdminBookings";
-import AdminMain from "@/pages/Exclusive/Admin/AdminMain";
-import AdminProperties from "@/pages/Exclusive/Admin/AdminProperties";
-import Amenities from "@/pages/Exclusive/Admin/Amenities";
-import Locations from "@/pages/Exclusive/Admin/Locations";
-import Support from "@/pages/Exclusive/Admin/Support";
-import Users from "@/pages/Exclusive/Admin/Users";
+import AdminBookings from "@/pages/admin/AdminBookings";
+import AdminMain from "@/pages/admin/AdminMain";
+import AdminProperties from "@/pages/admin/AdminProperties";
+import Amenities from "@/pages/admin/Amenities";
+import Locations from "@/pages/admin/Locations";
+import Support from "@/pages/admin/Support";
+import Users from "@/pages/admin/Users";
 //! Host
-import HostAbout from "@/pages/Exclusive/Host/HostAbout";
-import HostBookings from "@/pages/Exclusive/Host/HostBookings";
-import HostConnections from "@/pages/Exclusive/Host/HostConnections";
-import HostConnectionsDetails from "@/pages/Exclusive/Host/HostConnectionsDetails";
-import HostProperties from "@/pages/Exclusive/Host/HostProperties";
-import MainHost from "@/pages/Exclusive/Host/MainHost";
-import Review from "@/pages/Exclusive/Host/Review";
+import HostAbout from "@/pages/host/HostAbout";
+import HostBookings from "@/pages/host/HostBookings";
+import HostConnections from "@/pages/host/HostConnections";
+import HostConnectionsDetails from "@/pages/host/HostConnectionsDetails";
+import HostProperties from "@/pages/host/HostProperties";
+import MainHost from "@/pages/host/MainHost";
+import Review from "@/pages/host/Review";
 //! Profile
-import Favorites from "@/pages/Exclusive/Profile/Favorites";
-import MainProfile from "@/pages/Exclusive/Profile/MainProfile";
-import ProfileAbout from "@/pages/Exclusive/Profile/ProfileAbout";
-import ProfileConnections from "@/pages/Exclusive/Profile/ProfileConnections";
-import ProfileConnectionsDetails from "@/pages/Exclusive/Profile/ProfileConnectionsDetails";
-import Trips from "@/pages/Exclusive/Profile/Trips";
+import Favorites from "@/pages/profile/Favorites";
+import MainProfile from "@/pages/profile/MainProfile";
+import ProfileAbout from "@/pages/profile/ProfileAbout";
+import ProfileConnections from "@/pages/profile/ProfileConnections";
+import ProfileConnectionsDetails from "@/pages/profile/ProfileConnectionsDetails";
+import Trips from "@/pages/profile/Trips";
 //! -------------------- Main
-import Admin from "@/pages/Main/Admin";
-import Experience from "@/pages/Main/Experience";
-import Home from "@/pages/Main/Home";
-import Host from "@/pages/Main/Host";
-import ListDetails from "@/pages/Main/ListDetails";
-import Login from "@/pages/Main/Login";
-import NotFound from "@/pages/Main/NotFound";
-import Payment from "@/pages/Main/Payment";
-import Profile from "@/pages/Main/Profile";
-import Register from "@/pages/Main/Register";
-import SearchResult from "@/pages/Main/SearchResult";
-import Services from "@/pages/Main/Services";
-import UnAthorized from "@/pages/Main/UnAthorized";
+import Admin from "@/pages/general/Admin";
+import Experience from "@/pages/general/Experience/Experience";
+import Home from "@/pages/general/Home/Home";
+import Host from "@/pages/general/Host";
+import ListDetails from "@/pages/general/ListDetails";
+import Login from "@/pages/general/Login/Login";
+import NotFound from "@/pages/general/NotFound";
+import Payment from "@/pages/general/Payment";
+import Profile from "@/pages/general/Profile";
+import Register from "@/pages/general/Register";
+import SearchResult from "@/pages/general/SearchResult";
+import Services from "@/pages/general/Services/Services";
+import UnAthorized from "@/pages/general/UnAthorized";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //! ---------------------------------------- Component (Router)
 function Router() {

@@ -1,20 +1,17 @@
 //! ---------------------------------------- Import
-import Available from "@/components/Main/Home/Available";
-import Popular from "@/components/Main/Home/Popular";
-import Inspiration from "@/components/Main/Home/Inspiration";
+import CitySlides from "@/pages/general/Home/CitySlides";
+import Inspiration from "@/pages/general/Home/Inspiration";
 //! ---------------------------------------- Component (Home)
 function Home() {
   //! ---------------------------------------- Return
   return (
     <>
-      <main className="w-full">
-        {/* Popular */}
-        <Popular />
-        {/* Available */}
-        <Available />
+      <section className="w-full bg-white flex flex-col gap-5 p-10">
+        {/* CitySlides */}
+        <CitySlides />
         {/* Inspiration  */}
         <Inspiration />
-      </main>
+      </section>
     </>
   );
 }
