@@ -10,7 +10,11 @@ function HotelCard({ property }) {
       <Link
         to={`/listDetails`}
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="relative group cursor-pointer flex flex-col gap-2 justify-center items-stretch"
+=======
+        className="relative group cursor-pointer flex flex-col gap-1 justify-center items-stretch"
+>>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
 =======
         className="relative group cursor-pointer flex flex-col gap-1 justify-center items-stretch"
 >>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
@@ -26,6 +30,7 @@ function HotelCard({ property }) {
           </div>
           <button
             type="button"
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="absolute group/favorite cursor-pointer top-3 right-3 w-10 h-10 rounded-full bg-white hover:bg-gray-100 z-10 flex justify-center items-center"
             aria-label="Save"
@@ -46,6 +51,8 @@ function HotelCard({ property }) {
             />
             <span className="absolute opacity-0 group-hover/rating:opacity-100 transition-all ease-in-out duration-300 text-[15px] text-gray-900 font-medium">
 =======
+=======
+>>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
             className="absolute cursor-pointer top-3 right-3 w-10 h-10 rounded-full bg-white hover:bg-gray-100 z-10 flex justify-center items-center"
             aria-label="Save"
           >
@@ -62,11 +69,15 @@ function HotelCard({ property }) {
           <div className="flex items-center justify-center gap-1 w-10 h-10 absolute bottom-3 right-3 bg-white rounded-full">
             <ProjectIcons type={"star"} />
             <span className="text-[15px] text-gray-900 font-medium">
+<<<<<<< HEAD
+>>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
+=======
 >>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
               {property?.rating}
             </span>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex flex-col gap-1">
           <h3 className="text-[15px] font-medium text-gray-900 truncate group-hover:underline leading-tight">
@@ -84,6 +95,8 @@ function HotelCard({ property }) {
               For <strong>2</strong> nights
             </span>
 =======
+=======
+>>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
         <div className="mt-2">
           <h3 className="text-[15px] font-medium text-gray-900 truncate group-hover:underline leading-tight">
             {property?.title}
@@ -101,6 +114,9 @@ function HotelCard({ property }) {
               </span>
               <span className="text-[15px] text-gray-600">for 2 nights</span>
             </div>
+<<<<<<< HEAD
+>>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
+=======
 >>>>>>> 9c415d42b72344a2e6ec1f3d321b293fbb18ce4e
           </div>
         </div>
