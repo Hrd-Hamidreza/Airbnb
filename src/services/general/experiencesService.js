@@ -1,4 +1,5 @@
-import { experiencesData } from "@/data/experiences/experiencesData";
+//! ---------------------------------------- Import
+import { experiencesData } from "@/data";
 //! ---------------------------------------- Functions
 export function fetchExperiencesData() {
   return experiencesData;

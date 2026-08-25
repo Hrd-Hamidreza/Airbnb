@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
-import SwiperBox from "@/components/common/Box/SwiperBox";
-import { fetchExperiencesData } from "@/services/Genral/experienceService";
+import { SwiperBox } from "@/components";
+import { fetchExperiencesData } from "@/services";
 //! ---------------------------------------- Component (Experience)
 function Experience() {
   //! ---------------------------------------- Variables
@@ -12,7 +12,7 @@ function Experience() {
         {/* Popular */}
         {experienceTypes.map((type) => (
           <div key={type.id} className="w-full flex flex-col gap-5">
-            <SwiperBox {...{ type }} />
+            <SwiperBox {...{ box: type }} />
           </div>
         ))}
       </section>

@@ -1,6 +1,5 @@
 //! ---------------------------------------- Import
-import CitySlides from "@/pages/general/Home/CitySlides";
-import Inspiration from "@/pages/general/Home/Inspiration";
+import { CitySlides, Inspiration } from "@/pages";
 //! ---------------------------------------- Component (Home)
 function Home() {
   //! ---------------------------------------- Return

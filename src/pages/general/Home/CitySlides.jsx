@@ -1,5 +1,5 @@
 //! ---------------------------------------- Import
-import SwiperBox from "@/components/common/Box/SwiperBox";
+import { SwiperBox } from "@/components";
 //! ---------------------------------------- Component (CitySlides)
 function CitySlides() {
   //! ---------------------------------------- Variales

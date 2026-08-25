@@ -1,6 +1,5 @@
 //! ---------------------------------------- Import
-import Head from "./Head/Head";
-import SearchBox from "./SearchBox";
+import { Head, SearchBox } from "@/layouts";
 //! ---------------------------------------- Component (Header)
 function Header() {
   return (

@@ -2,8 +2,9 @@
 export const experiencesData = [
   {
     id: 1,
+    type: "Popular",
     title: "Popular experiences in Helsinki",
-    properties: [
+    cards: [
       {
         id: 1,
         title: "Explore Helsinki with a Local Guide",
@@ -78,8 +79,9 @@ export const experiencesData = [
   },
   {
     id: 2,
+    type: "Original",
     title: "Airbnb Originals",
-    properties: [
+    cards: [
       {
         id: 8,
         title: "Street art and culture tour",

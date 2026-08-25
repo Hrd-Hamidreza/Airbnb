@@ -1,43 +1,47 @@
 //! ---------------------------------------- Import
-//! -------------------- Exclusive
-import MainLayout from "@/layouts/MainLayout/MainLayout";
-//! Admin
-import AdminBookings from "@/pages/admin/AdminBookings";
-import AdminMain from "@/pages/admin/AdminMain";
-import AdminProperties from "@/pages/admin/AdminProperties";
-import Amenities from "@/pages/admin/Amenities";
-import Locations from "@/pages/admin/Locations";
-import Support from "@/pages/admin/Support";
-import Users from "@/pages/admin/Users";
-//! Host
-import HostAbout from "@/pages/host/HostAbout";
-import HostBookings from "@/pages/host/HostBookings";
-import HostConnections from "@/pages/host/HostConnections";
-import HostConnectionsDetails from "@/pages/host/HostConnectionsDetails";
-import HostProperties from "@/pages/host/HostProperties";
-import MainHost from "@/pages/host/MainHost";
-import Review from "@/pages/host/Review";
-//! Profile
-import Favorites from "@/pages/profile/Favorites";
-import MainProfile from "@/pages/profile/MainProfile";
-import ProfileAbout from "@/pages/profile/ProfileAbout";
-import ProfileConnections from "@/pages/profile/ProfileConnections";
-import ProfileConnectionsDetails from "@/pages/profile/ProfileConnectionsDetails";
-import Trips from "@/pages/profile/Trips";
-//! -------------------- Main
-import Admin from "@/pages/general/Admin";
-import Experience from "@/pages/general/Experience/Experience";
-import Home from "@/pages/general/Home/Home";
-import Host from "@/pages/general/Host";
-import ListDetails from "@/pages/general/ListDetails";
-import Login from "@/pages/general/Login/Login";
-import NotFound from "@/pages/general/NotFound";
-import Payment from "@/pages/general/Payment";
-import Profile from "@/pages/general/Profile";
-import Register from "@/pages/general/Register";
-import SearchResult from "@/pages/general/SearchResult";
-import Services from "@/pages/general/Services/Services";
-import UnAthorized from "@/pages/general/UnAthorized";
+//! -------------------- Layout
+import { MainLayout } from "@/layouts";
+//! -------------------- Pages
+import {
+  //! Main
+  Home,
+  Admin,
+  Experience,
+  Host,
+  ListDetails,
+  Login,
+  NotFound,
+  Payment,
+  Profile,
+  Register,
+  SearchResult,
+  Services,
+  UnAthorized,
+  //! Admin
+  AdminBookings,
+  AdminMain,
+  AdminProperties,
+  Amenities,
+  Locations,
+  Support,
+  Users,
+  //! Host
+  HostAbout,
+  HostBookings,
+  HostConnections,
+  HostConnectionsDetails,
+  HostProperties,
+  MainHost,
+  Review,
+  //! Profile
+  Favorites,
+  MainProfile,
+  ProfileAbout,
+  ProfileConnections,
+  ProfileConnectionsDetails,
+  Trips,
+} from "@/pages";
+//! -------------------- Structure
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //! ---------------------------------------- Component (Router)
 function Router() {

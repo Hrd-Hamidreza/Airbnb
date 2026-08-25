@@ -12,12 +12,11 @@
 }
 
 /*! components Layer */
-@layer components {}
+@layer components {
+    @import "./components/active.css";
+}
 
 /*! utilities Layer */
 @layer utilities {}
 
 /*! Utility */
-@utility active {
-    @apply border-b-2 border-black
-}
