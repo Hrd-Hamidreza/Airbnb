@@ -1,8 +1,7 @@
 //! ---------------------------------------- Import
-import ScrollSettings from "@/utils/General/ScrollSettings";
 import { Outlet } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import { ScrollSettings } from "@/utils";
+import { Footer, Header } from "@/layouts";
 //! ---------------------------------------- Component (MainLayout)
 function MainLayout() {
   return (

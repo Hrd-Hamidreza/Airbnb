@@ -4,22 +4,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import HotelCard from "../Card/HotelCard";
-import NavigationBtn from "../Btn/NavigationBtn";
+import { SwiperCard, NavigationBtn } from "@/components";
 //! ---------------------------------------- Component (SwiperBox)
-function SwiperBox({ type }) {
+function SwiperBox({ box }) {
   //! ---------------------------------------- Hooks
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   //! ---------------------------------------- Return
   return (
     <>
-      {/* Title */}
-      <div className="flex items-center justify-between">
+      {/* Head */}
+      <div className="flex flex-col">
         {/* Title Text */}
-        <h2 className="text-2xl font-semibold text-gray-900">{type?.title}</h2>
-        {/* Navigation Buttons */}
-        <NavigationBtn {...{ prevRef, nextRef }} />
+        <div className="flex items-center justify-between">
+          {/* Text */}
+          <h2 className="text-2xl font-semibold text-gray-900">{box?.title}</h2>
+          {/* Navigation Buttons */}
+          <NavigationBtn {...{ prevRef, nextRef }} />
+        </div>
+        {/* SubTitle */}
+        <h2 className="text-lg text-gray-700">{box?.subTitle}</h2>
       </div>
       {/* Swiper */}
       <div>
@@ -33,9 +37,9 @@ function SwiperBox({ type }) {
           spaceBetween={8}
           slidesPerView="auto"
         >
-          {type?.properties?.map((property) => (
-            <SwiperSlide key={property?.id} className="!w-[240px]">
-              <HotelCard {...{ property }} />
+          {box?.cards?.map((card) => (
+            <SwiperSlide key={card?.id} className="!w-[240px]">
+              <SwiperCard {...{ card, type: box.type }} />
             </SwiperSlide>
           ))}
         </Swiper>
