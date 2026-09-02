@@ -20,3 +20,10 @@
 @layer utilities {}
 
 /*! Utility */
+@utility skeleton {
+    @apply bg-gray-500 text-gray-500 animate-pulse
+}
+
+@utility skeleton-box {
+    @apply absolute inset-0 bg-gray-500 text-gray-500 animate-pulse
+}

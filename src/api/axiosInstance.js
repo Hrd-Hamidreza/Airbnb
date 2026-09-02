@@ -2,7 +2,7 @@
 import axios from "axios";
 //! ---------------------------------------- Variables
 export const axiosInstance = axios.create({
-  baseURL: "http://airbnb-api.devminds.ir/api/v2",
+  baseURL: "https://airbnb-api.devminds.ir/api/v2",
   timeout: 5000,
   headers: {
     Accept: "application/json",
