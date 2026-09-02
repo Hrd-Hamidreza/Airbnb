@@ -16,7 +16,6 @@ import {
   Register,
   SearchResult,
   Services,
-  UnAthorized,
   //! Admin
   AdminBookings,
   AdminMain,
@@ -58,7 +57,6 @@ function Router() {
           <Route path="/register" element={<Register />} />
           <Route path="/searchResult" element={<SearchResult />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/unAthorized" element={<UnAthorized />} />
           {/* Exclusive */}
           {/* Admin */}
           <Route path="/admin" element={<Admin />}>

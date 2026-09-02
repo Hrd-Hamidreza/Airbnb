@@ -1,9 +1,9 @@
 export const servicesData = [
   {
     id: 1,
-    type: "Services",
+    category: "Services",
     title: "Services in Helsinki",
-    cards: [
+    data: [
       {
         id: 1,
         name: "Photography",
@@ -78,10 +78,10 @@ export const servicesData = [
   },
   {
     id: 2,
-    type: "Discover",
+    category: "Discover",
     title: "Discover services on Airbnb",
     subTitle: "Chefs",
-    cards: [
+    data: [
       {
         id: 1,
         title: "Authentic Roman meal",

@@ -5,7 +5,7 @@ function Home() {
   //! ---------------------------------------- Return
   return (
     <>
-      <section className="w-full bg-white flex flex-col gap-5 p-10">
+      <section className="w-full bg-white flex flex-col gap-10 p-10">
         {/* CitySlides */}
         <CitySlides />
         {/* Inspiration  */}

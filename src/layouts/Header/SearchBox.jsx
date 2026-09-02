@@ -1,7 +1,9 @@
 //! ---------------------------------------- Import
+import { ProjectIcons } from "@/components";
 import { Link } from "react-router-dom";
 //! ---------------------------------------- Component (SearchBox)
 function SearchBox() {
+  //! ---------------------------------------- Return
   return (
     <>
       <div className="flex items-center justify-between bg-white border border-gray-300 rounded-full shadow-lg hover:shadow-xl transition-shadow w-full max-w-[850px] relative">
@@ -23,19 +25,7 @@ function SearchBox() {
           to={`/searchResult`}
           className="m-2 p-3 bg-[#FF385C] text-white rounded-full hover:bg-[#E61E4D] transition-colors"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          <ProjectIcons type={"search"} />
         </Link>
       </div>
     </>

@@ -1,6 +1,6 @@
 //! General
-export { default as Home } from "@/pages/general/Home/Home";
 //! Components
+export { default as Home } from "@/pages/general/Home/Home";
 export { default as CitySlides } from "@/pages/general/Home/CitySlides";
 export { default as Inspiration } from "@/pages/general/Home/Inspiration";
 //! ----------
@@ -10,12 +10,17 @@ export { default as Login } from "@/pages/general/Login/Login";
 export { default as Admin } from "@/pages/general/Admin/Admin";
 export { default as Host } from "@/pages/general/Host/Host";
 export { default as ListDetails } from "@/pages/general/ListDetails/ListDetails";
+//! Components
 export { default as NotFound } from "@/pages/general/NotFound/NotFound";
+export { default as Error401 } from "@/pages/general/NotFound/Error401";
+export { default as Error403 } from "@/pages/general/NotFound/Error403";
+export { default as Error404 } from "@/pages/general/NotFound/Error404";
+export { default as Error500 } from "@/pages/general/NotFound/Error500";
+//! ----------
 export { default as Payment } from "@/pages/general/Payment/Payment";
 export { default as Profile } from "@/pages/general/Profile/Profile";
 export { default as Register } from "@/pages/general/Register/Register";
 export { default as SearchResult } from "@/pages/general/SearchResult/SearchResult";
-export { default as UnAthorized } from "@/pages/general/UnAthorized/UnAthorized";
 //! Admin
 export { default as AdminBookings } from "@/pages/Admin/AdminBookings/AdminBookings";
 export { default as AdminMain } from "@/pages/Admin/AdminMain/AdminMain";

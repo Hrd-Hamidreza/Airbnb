@@ -67,7 +67,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop"
                       alt="Apartment in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -132,7 +132,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=400&h=300&fit=crop"
                       alt="Apartment in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -197,7 +197,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
                       alt="Apartment in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -262,7 +262,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop"
                       alt="Home in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -327,7 +327,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=300&fit=crop"
                       alt="Apartment in Pirkkala"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -392,7 +392,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop"
                       alt="Apartment in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -457,7 +457,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
                       alt="Apartment in Tampere"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -579,7 +579,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1505843512647-910227c83fe2?w=400&h=300&fit=crop"
                       alt="Condo in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -644,7 +644,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1486304877000-0f035397e38f?w=400&h=300&fit=crop"
                       alt="Apartment in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -709,7 +709,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400&h=300&fit=crop"
                       alt="Condo in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -774,7 +774,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
                       alt="Apartment in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -839,7 +839,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop"
                       alt="Room in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -904,7 +904,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=400&h=300&fit=crop"
                       alt="Apartment in Põhja-Tallinna"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
@@ -969,7 +969,7 @@ function ListDetails() {
                     <img
                       src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
                       alt="Guesthouse in Tallinn"
-                      className="w-full h-[242px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded-md text-xs font-semibold shadow-sm">
                       Guest favorite
