@@ -80,7 +80,7 @@ function Trips() {
                       2026-01-16 → 2026-01-18 · 2 nights
                     </p>
                     <p className="text-sm text-gray-600">
-                      Booking #BK-2026-001 ·{" "}
+                      Booking #BK-2026-001 ·
                       <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-semibold capitalize bg-green-100 text-green-800">
                         confirmed
                       </span>
@@ -123,7 +123,7 @@ function Trips() {
                       2025-11-10 → 2025-11-15 · 5 nights
                     </p>
                     <p className="text-sm text-gray-600">
-                      Booking #BK-2025-042 ·{" "}
+                      Booking #BK-2025-042 ·
                       <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-semibold capitalize bg-gray-100 text-gray-800">
                         completed
                       </span>
@@ -187,7 +187,7 @@ function Trips() {
             </Link>
             <button
               type="button"
-              className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-[#E61E4D]"
+              className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-rose-700"
             >
               Send
             </button>
@@ -342,7 +342,7 @@ function Trips() {
               </Link>
               <button
                 type="submit"
-                className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-[#E61E4D]"
+                className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-rose-700"
               >
                 Submit review
               </button>

@@ -69,7 +69,7 @@ function HostProperties() {
                 <Link
                   to={``}
                   href="#add-property-modal"
-                  className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D] transition-colors"
+                  className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700 transition-colors"
                 >
                   Add Property
                 </Link>
@@ -409,7 +409,7 @@ function HostProperties() {
                   <input
                     type="checkbox"
                     checked
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">wifi</span>
                 </label>
@@ -417,14 +417,14 @@ function HostProperties() {
                   <input
                     type="checkbox"
                     checked
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">kitchen</span>
                 </label>
                 <label className="flex items-center gap-2">
                   <input
                     type="checkbox"
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">parking</span>
                 </label>
@@ -432,7 +432,7 @@ function HostProperties() {
                   <input
                     type="checkbox"
                     checked
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">tv</span>
                 </label>
@@ -440,14 +440,14 @@ function HostProperties() {
                   <input
                     type="checkbox"
                     checked
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">heating</span>
                 </label>
                 <label className="flex items-center gap-2">
                   <input
                     type="checkbox"
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">washer</span>
                 </label>
@@ -469,7 +469,7 @@ function HostProperties() {
                 <label className="flex items-center gap-2 whitespace-nowrap">
                   <input
                     type="checkbox"
-                    className="w-4 h-4 text-[#FF385C] border-gray-300 rounded"
+                    className="w-4 h-4 text-rose-500 border-gray-300 rounded"
                   />
                   <span className="text-sm text-gray-700">Primary image</span>
                 </label>
@@ -490,7 +490,7 @@ function HostProperties() {
               </Link>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
               >
                 Add Property
               </button>

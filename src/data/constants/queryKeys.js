@@ -1,4 +1,5 @@
 export const queryKeys = {
   destinations: ["destinations"],
-  properties: (id) => ["city", id],
+  properties: (id) => ["properties", id],
+  property: (id) => ["property", id],
 };

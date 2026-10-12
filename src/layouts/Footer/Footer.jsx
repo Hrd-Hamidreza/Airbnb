@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="w-full bg-gray-50 shadow-[0_-5px_18px_var(--color-gray-200)] p-10">
-        <div className="max-w-[1760px] mx-auto">
+      <footer className="w-full bg-gray-50 shadow-[0_-5px_18px_var(--color-gray-200)] py-10">
+        <div className="w-11/12 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mb-8">
             <div>
               <h3 className="text-sm font-semibold text-gray-900 mb-4">

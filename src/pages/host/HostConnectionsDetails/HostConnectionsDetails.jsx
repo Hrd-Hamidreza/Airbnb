@@ -86,7 +86,7 @@ function HostConnectionsDetails() {
                       Conversation details
                     </h3>
                     <p className="text-sm text-gray-600 mt-1">
-                      Status:{" "}
+                      Status:
                       <span className="capitalize font-medium">open</span>
                       <span className="ml-3">Booking # BK-2026-001</span>
                     </p>
@@ -134,7 +134,7 @@ function HostConnectionsDetails() {
                         rows="3"
                         className="flex-1 rounded-xl border border-gray-300 px-4 py-3 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-[#FF385C] focus:border-transparent resize-y min-h-[80px]"
                       ></textarea>
-                      <button className="self-end px-5 py-3 rounded-xl bg-[#FF385C] text-white font-semibold hover:bg-[#E61E4D]">
+                      <button className="self-end px-5 py-3 rounded-xl bg-[#FF385C] text-white font-semibold hover:bg-rose-700">
                         Send
                       </button>
                     </div>

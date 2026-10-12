@@ -24,6 +24,44 @@
     @apply bg-gray-500 text-gray-500 animate-pulse
 }
 
+
+@utility skeleton-bold {
+    @apply bg-gray-700 text-gray-700 animate-pulse
+}
+
+@utility skeleton-extraBold {
+    @apply bg-gray-950 text-gray-950 animate-pulse
+}
+
+@utility skeleton-text {
+    @apply text-gray-500 animate-pulse
+}
+
+@utility skeleton-text-bold {
+    @apply text-gray-700 animate-pulse
+}
+
+
 @utility skeleton-box {
     @apply absolute inset-0 bg-gray-500 text-gray-500 animate-pulse
+}
+
+@utility position-center {
+    @apply absolute top-0 bottom-0 right-0 left-0 mx-auto
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center
+}
+
+@utility flex-stretch {
+    @apply flex justify-center items-stretch
+}
+
+@utility flex-col-center {
+    @apply flex flex-col justify-center items-center
+}
+
+@utility flex-col-stretch {
+    @apply flex flex-col justify-center items-stretch
 }

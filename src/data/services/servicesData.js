@@ -6,70 +6,70 @@ export const servicesData = [
     data: [
       {
         id: 1,
-        name: "Photography",
+        title: "Photography",
         status: "1 available",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzMgMLN2FvL2WzPxbEnvETOPH2QU6W6WVpo3OgUgKHr-Qvg9oY_wy5htU&s=10",
       },
       {
         id: 2,
-        name: "Chefs",
+        title: "Chefs",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS470tGaYtg5AAHYL_WZH_QNzZeK_vOiTHB3Ab_hjM2EID5Wx8Ilg54ceEj&s=10",
       },
       {
         id: 3,
-        name: "Prepared meals",
+        title: "Prepared meals",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzSQ0oJBZnWO12sGuuwXlDIoiSzy-Skzr-q1zu41HvVsn1EyF9XnXP6K4&s=10",
       },
       {
         id: 4,
-        name: "Massage",
+        title: "Massage",
         status: "Coming soon",
         image:
           "https://r-xx.bstatic.com/xdata/images/hotel/608x352/880609404.webp?k=21a4e956f6fc1797d66cda83aad3d22f9574f3d1c74ab224504eab8e898a9759&o=",
       },
       {
         id: 5,
-        name: "Training",
+        title: "Training",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSv2uzpnuAEs94_OcR18gIUZnv2ZJKTm750Zy-IdpAYpVwgCADJiEIgEKg&s=10",
       },
       {
         id: 6,
-        name: "Makeup",
+        title: "Makeup",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsGoPQDi4E4iDz1kdfEgMgc4uYUgd6hnSJO0RUDcKmGKp0PPQiR_Ri7aBi&s=10",
       },
       {
         id: 7,
-        name: "Hair",
+        title: "Hair",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHQQmiICVDX_rb52uiEgMmlEsF9R7OYRIdAHe3W_SdPOlQw25kNo3nCg&s=10",
       },
       {
         id: 8,
-        name: "Spa treatments",
+        title: "Spa treatments",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINNs2FLnj-vHLHXHl-g1ABvdC6bGu7CId5SbfZy-Z1TkmVMntf40BcwJC&s=10",
       },
       {
         id: 9,
-        name: "Catering",
+        title: "Catering",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLg6PkNiNBv06AuGzosAgsz3N-X8dxniOnLeoGvsfc9OySEQGyH4R5D24&s=10",
       },
       {
         id: 10,
-        name: "Nails",
+        title: "Nails",
         status: "Coming soon",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS-_hRr1o1CaW3mTBTQgMOZ_HpgJU94EbdGh9wpQRwQrJ5tOGumJwYtNE&s=10",

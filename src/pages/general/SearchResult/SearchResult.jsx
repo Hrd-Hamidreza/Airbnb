@@ -103,7 +103,7 @@ function SearchResult() {
                   </p>
                   <p className="text-[15px] text-gray-600">Business host</p>
                   <p className="text-[15px] font-semibold text-gray-900 mt-1">
-                    € 145{" "}
+                    € 145
                     <span className="font-normal text-gray-600">
                       for 1 night
                     </span>
@@ -147,7 +147,7 @@ function SearchResult() {
                   </p>
                   <p className="text-[15px] text-gray-600">Individual host</p>
                   <p className="text-[15px] font-semibold text-gray-900 mt-1">
-                    € 210{" "}
+                    € 210
                     <span className="font-normal text-gray-600">
                       for 1 night
                     </span>
@@ -192,7 +192,7 @@ function SearchResult() {
                   <p className="text-[15px] text-gray-600">1 bedroom · 1 bed</p>
                   <p className="text-[15px] text-gray-600">Individual host</p>
                   <p className="text-[15px] font-semibold text-gray-900 mt-1">
-                    € 95{" "}
+                    € 95
                     <span className="font-normal text-gray-600">
                       for 1 night
                     </span>
@@ -236,7 +236,7 @@ function SearchResult() {
                   </p>
                   <p className="text-[15px] text-gray-600">Business host</p>
                   <p className="text-[15px] font-semibold text-gray-900 mt-1">
-                    € 175{" "}
+                    € 175
                     <span className="font-normal text-gray-600">
                       for 1 night
                     </span>
@@ -283,7 +283,7 @@ function SearchResult() {
                   </p>
                   <p className="text-[15px] text-gray-600">Individual host</p>
                   <p className="text-[15px] font-semibold text-gray-900 mt-1">
-                    € 132{" "}
+                    € 132
                     <span className="font-normal text-gray-600">
                       for 1 night
                     </span>

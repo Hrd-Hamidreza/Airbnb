@@ -93,7 +93,7 @@ function Locations() {
                       />
                       <button
                         type="submit"
-                        className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                        className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
                       >
                         Add Country
                       </button>
@@ -150,7 +150,7 @@ function Locations() {
                       />
                       <button
                         type="submit"
-                        className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                        className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
                       >
                         Add City
                       </button>

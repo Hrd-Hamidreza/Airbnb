@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { NavigationBtn, SeeAllCard } from "@/components";
-//! ---------------------------------------- Component (SwiperBox)
-function SwiperBox({ data = [], title, subTitle, ComponentCard }) {
+import { NavigationBtn, MoreCards } from "@/components";
+//! ---------------------------------------- Component (MainSwiperBox)
+function MainSwiperBox({ data = [], title, subTitle, ComponentCard }) {
   //! ---------------------------------------- Variables
   const from = 0;
   const to = Math.floor(window.innerWidth / 240);
-  //! ---------------------------------------- Hooks
+  //! --------------------
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   //! ---------------------------------------- Return
@@ -19,7 +19,9 @@ function SwiperBox({ data = [], title, subTitle, ComponentCard }) {
       <div className="flex flex-col">
         <div className="flex items-center justify-between">
           {/* title */}
-          <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+          {title && (
+            <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>
+          )}
 
           {/* Navigation Buttons */}
           <NavigationBtn {...{ prevRef, nextRef }} />
@@ -49,7 +51,7 @@ function SwiperBox({ data = [], title, subTitle, ComponentCard }) {
           {/* SeeAllCards */}
           {data?.length > to && (
             <SwiperSlide className="!w-60">
-              <SeeAllCard {...{ data, to }} />
+              <MoreCards {...{ data, to }} />
             </SwiperSlide>
           )}
         </Swiper>
@@ -58,4 +60,4 @@ function SwiperBox({ data = [], title, subTitle, ComponentCard }) {
   );
 }
 //! ---------------------------------------- Export
-export default SwiperBox;
+export default MainSwiperBox;

@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
-import { PropertyCard, SwiperBox, SwiperBoxSkeleton } from "@/components";
-import { useDestinations, useProperties } from "@/hooks";
+import { HomeCard, MainSwiperBox, MainSwiperBoxSkeleton } from "@/components";
+import { useProperties, useDestinations } from "@/hooks";
 import { NotFound } from "@/pages";
 //! ---------------------------------------- Variables
 const skeletonsCount = 5;
@@ -24,7 +24,7 @@ function CitySlides() {
         {/* Destinations Loading */}
         {destinationsIsLoading &&
           Array.from({ length: skeletonsCount }).map((_, index) => (
-            <SwiperBoxSkeleton key={index} />
+            <MainSwiperBoxSkeleton key={index} />
           ))}
 
         {/* Destinations Error */}
@@ -48,7 +48,9 @@ function CitySlides() {
             //! Property Loading
             if (propertyIsLoading) {
               return Array.from({ length: skeletonsCount }).map((_, index) => (
-                <SwiperBoxSkeleton key={`${destination.city_id}-${index}`} />
+                <MainSwiperBoxSkeleton
+                  key={`${destination.city_id}-${index}`}
+                />
               ));
             }
 
@@ -65,10 +67,10 @@ function CitySlides() {
             //! Property Success
             if (propertyIsSuccess) {
               return (
-                <SwiperBox
+                <MainSwiperBox
                   key={destination.city_id}
                   title={`Houses in ${destination.city_name}, ${destination.country_name}`}
-                  ComponentCard={PropertyCard}
+                  ComponentCard={HomeCard}
                   {...{ data: propertyData }}
                 />
               );

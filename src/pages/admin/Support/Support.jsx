@@ -232,7 +232,7 @@ function Support() {
             </Link>
             <button
               type="button"
-              className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-[#E61E4D]"
+              className="px-4 py-2 rounded-xl bg-[#FF385C] text-white font-medium hover:bg-rose-700"
             >
               Send reply
             </button>

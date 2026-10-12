@@ -8,7 +8,7 @@ import {
   Admin,
   Experience,
   Host,
-  ListDetails,
+  PropertyHandler,
   Login,
   NotFound,
   Payment,
@@ -51,13 +51,12 @@ function Router() {
           {/* Main */}
           <Route index element={<Home />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/listDetails" element={<ListDetails />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/property-details/:id" element={<PropertyHandler />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/payment" element={<Payment />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/searchResult" element={<SearchResult />} />
-          <Route path="/services" element={<Services />} />
-          {/* Exclusive */}
           {/* Admin */}
           <Route path="/admin" element={<Admin />}>
             <Route path="adminBookings" element={<AdminBookings />} />
@@ -93,6 +92,7 @@ function Router() {
             />
             <Route path="trips" element={<Trips />} />
           </Route>
+          {/* InValid */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

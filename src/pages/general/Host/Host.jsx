@@ -72,7 +72,7 @@ function Host() {
                   />
                   <h3 className="text-xl font-semibold text-gray-900">Oskar</h3>
                   <p className="text-sm text-gray-600">oskar@example.com</p>
-                  <span className="inline-block mt-2 text-xs font-medium text-[#FF385C]">
+                  <span className="inline-block mt-2 text-xs font-medium text-rose-500">
                     Superhost
                   </span>
                 </div>

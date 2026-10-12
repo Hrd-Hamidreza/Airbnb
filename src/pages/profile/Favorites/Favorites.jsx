@@ -96,7 +96,7 @@ function Favorites() {
                         </p>
                       </Link>
                       <button
-                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-[#FF385C]"
+                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-rose-500"
                         title="Remove from favorites"
                       >
                         <svg
@@ -157,7 +157,7 @@ function Favorites() {
                         </p>
                       </Link>
                       <button
-                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-[#FF385C]"
+                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-rose-500"
                         title="Remove from favorites"
                       >
                         <svg
@@ -218,7 +218,7 @@ function Favorites() {
                         </p>
                       </Link>
                       <button
-                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-[#FF385C]"
+                        className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 text-rose-500"
                         title="Remove from favorites"
                       >
                         <svg

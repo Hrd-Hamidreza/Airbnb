@@ -6,7 +6,7 @@ function SearchBox() {
   //! ---------------------------------------- Return
   return (
     <>
-      <div className="flex items-center justify-between bg-white border border-gray-300 rounded-full shadow-lg hover:shadow-xl transition-shadow w-full max-w-[850px] relative">
+      <div className="w-8/12 mx-auto flex items-center justify-between bg-white border border-gray-300 rounded-full shadow-lg hover:shadow-xl transition-shadow relative">
         <div className="flex-1 px-6 py-4 text-left hover:bg-gray-50 rounded-full transition-colors">
           <div className="text-xs font-semibold text-gray-900">Where</div>
           <div className="text-sm text-gray-500 truncate">Tampere, Finland</div>
@@ -23,7 +23,7 @@ function SearchBox() {
         </div>
         <Link
           to={`/searchResult`}
-          className="m-2 p-3 bg-[#FF385C] text-white rounded-full hover:bg-[#E61E4D] transition-colors"
+          className="m-2 p-3 bg-[#FF385C] text-white rounded-full hover:bg-rose-700 transition-colors"
         >
           <ProjectIcons type={"search"} />
         </Link>
