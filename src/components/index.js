@@ -1,17 +1,17 @@
 //! -------------------------------------- Card
-export { default as DiscoverCard } from "@/components/common/Card/DiscoverCard";
-export { default as OriginalCard } from "@/components/common/Card/OriginalCard";
-export { default as PopularCard } from "@/components/common/Card/PopularCard";
-export { default as PropertyCard } from "@/components/common/Card/PropertyCard";
-export { default as ServicesCard } from "@/components/common/Card/ServicesCard";
-export { default as SeeAllCard } from "@/components/common/Card/SeeAllCard";
+export { default as HomeCard } from "@/components/common/Card/Cards/HomeCard";
+export { default as ExperiencesCard } from "@/components/common/Card/Cards/ExperiencesCard";
+export { default as ServicesCard } from "@/components/common/Card/Cards/ServicesCard";
+export { default as MoreCards } from "@/components/common/Card/More/MoreCards";
+export { default as PropertyReviewCard } from "@/components/common/Card/Cards/PropertyReviewCard";
 //! Skeletons
-export { default as CardsSkeleton } from "@/components/common/Card/CardsSkeleton";
+export { default as MainCardsSkeleton } from "@/components/common/Card/Skeleton/MainCardsSkeleton";
+export { default as PropertyReviewCardSkeleton } from "@/components/common/Card/Skeleton/PropertyReviewCardSkeleton";
 //! --------
 //! -------------------------------------- Box
-export { default as SwiperBox } from "@/components/common/Box/SwiperBox";
+export { default as MainSwiperBox } from "@/components/common/Box/MainSwiperBox/MainSwiperBox";
 //! Skeletons
-export { default as SwiperBoxSkeleton } from "@/components/common/Box/SwiperBoxSkeleton";
+export { default as MainSwiperBoxSkeleton } from "@/components/common/Box/MainSwiperBox/MainSwiperBoxSkeleton";
 //! --------
 //! -------------------------------------- Btn
 export { default as NavigationBtn } from "@/components/common/Btn/NavigationBtn";
@@ -20,3 +20,5 @@ export { default as NavigationBtnSkeleton } from "@/components/common/Btn/Naviga
 //! --------
 //! -------------------------------------- Icon
 export { default as ProjectIcons } from "@/components/common/Icon/ProjectIcons";
+//! -------------------------------------- Modal
+export { default as GalleryModal } from "@/components/common/modal/GalleryModal";

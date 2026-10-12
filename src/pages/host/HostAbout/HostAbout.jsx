@@ -86,7 +86,7 @@ function HostAbout() {
                     <p className="text-xs text-gray-500 mt-1">
                       Joined Mar 2024
                     </p>
-                    <span className="inline-block mt-2 text-xs font-medium text-[#FF385C]">
+                    <span className="inline-block mt-2 text-xs font-medium text-rose-500">
                       Superhost
                     </span>
                   </div>
@@ -292,7 +292,7 @@ function HostAbout() {
             <div className="flex gap-3 pt-2">
               <button
                 type="submit"
-                className="bg-[#FF385C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#E61E4D] transition-colors"
+                className="bg-[#FF385C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-rose-700 transition-colors"
               >
                 Save
               </button>

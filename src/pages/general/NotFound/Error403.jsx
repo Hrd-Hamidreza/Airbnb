@@ -14,7 +14,7 @@ function Error403() {
             403
           </h1>
           <p className="mt-3 text-lg sm:text-xl font-semibold text-gray-800">
-            Access Denied{" "}
+            Access Denied
           </p>
           <p className="mt-2 text-sm sm:text-base text-gray-600">
             You do not have the required permission to access this page.
@@ -22,14 +22,14 @@ function Error403() {
         </div>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
-            to={``}
+            to={-1}
             href="javascript:history.back()"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors"
           >
             Go back
           </Link>
           <Link
-            to={``}
+            to={`/`}
             href="index.html"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-red-600 transition-colors"
           >

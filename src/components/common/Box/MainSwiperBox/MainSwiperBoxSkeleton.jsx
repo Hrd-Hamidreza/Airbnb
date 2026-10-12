@@ -1,10 +1,10 @@
 //! ---------------------------------------- Import
-import NavigationBtnSkeleton from "../Btn/NavigationBtnSkeleton";
-import CardsSkeleton from "../Card/CardsSkeleton";
+import NavigationBtnSkeleton from "../../Btn/NavigationBtnSkeleton";
+import CardsSkeleton from "../../Card/Skeleton/MainCardsSkeleton";
 //! ---------------------------------------- Variables
 const skeletonCount = 5;
-//! ---------------------------------------- Component (SwiperBoxSkeleton)
-function SwiperBoxSkeleton() {
+//! ---------------------------------------- Component (MainSwiperBoxSkeleton)
+function MainSwiperBoxSkeleton() {
   //! ---------------------------------------- Return
   return (
     <>
@@ -33,4 +33,4 @@ function SwiperBoxSkeleton() {
   );
 }
 //! ---------------------------------------- Export
-export default SwiperBoxSkeleton;
+export default MainSwiperBoxSkeleton;

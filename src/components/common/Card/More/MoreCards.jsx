@@ -1,11 +1,11 @@
 //! ---------------------------------------- Import
 import { useState } from "react";
-import ProjectIcons from "../Icon/ProjectIcons";
+import ProjectIcons from "../../Icon/ProjectIcons";
 //! ---------------------------------------- Variables
 const DEFAULT_IMAGE =
   "https://cdn.jabama.com/image/jabama-images/1629675/39dd5b88-9e07-49ae-be40-c1bcbb304f57.jpg?x-img=v1%2Fformat%2Ctype_webp%2Fresize%2Cw_1200";
-//! ---------------------------------------- Component (SeeAllCard)
-function SeeAllCard({ data, to }) {
+//! ---------------------------------------- Component (MoreCards)
+function MoreCards({ data, to }) {
   //! ---------------------------------------- Hooks
   const [loaded, setLoaded] = useState(false);
   //! ---------------------------------------- Variables
@@ -38,7 +38,9 @@ function SeeAllCard({ data, to }) {
                     />
                   </>
                 ) : (
-                  <div className="flex w-full h-full justify-center items-center bg-gray-200" />
+                  <div className="flex text-xs w-full h-full justify-center items-center bg-gray-200">
+                    No more images
+                  </div>
                 )}
               </div>
             );
@@ -59,4 +61,4 @@ function SeeAllCard({ data, to }) {
   );
 }
 //! ---------------------------------------- Export
-export default SeeAllCard;
+export default MoreCards;

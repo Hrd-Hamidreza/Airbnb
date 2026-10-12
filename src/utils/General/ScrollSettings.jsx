@@ -4,11 +4,11 @@ import { useLocation } from "react-router-dom";
 //! ---------------------------------------- Component (ScrollSettings)
 const ScrollSettings = () => {
   //! ---------------------------------------- Hooks
-  const pathName = useLocation();
+  const { pathname } = useLocation();
   //! --------------------
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [pathName]);
+  }, [pathname]);
   //! ---------------------------------------- Return
   return null;
 };

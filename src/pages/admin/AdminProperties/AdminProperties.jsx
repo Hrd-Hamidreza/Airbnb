@@ -106,7 +106,7 @@ function AdminProperties() {
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2">
                       <span className="text-sm text-gray-600">Oskar</span>
-                      <span className="text-xs font-medium text-[#FF385C]">
+                      <span className="text-xs font-medium text-rose-500">
                         Superhost
                       </span>
                     </div>
@@ -148,7 +148,7 @@ function AdminProperties() {
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2">
                       <span className="text-sm text-gray-600">Maria</span>
-                      <span className="text-xs font-medium text-[#FF385C]">
+                      <span className="text-xs font-medium text-rose-500">
                         Superhost
                       </span>
                     </div>

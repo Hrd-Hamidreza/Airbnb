@@ -8,13 +8,13 @@ function Register() {
         <div className="flex justify-center">
           <Link to={`/register`} className="flex items-center space-x-2">
             <svg
-              className="w-8 h-8 text-[#FF385C]"
+              className="w-8 h-8 text-rose-500"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span className="text-2xl font-bold text-[#FF385C]">airbnb</span>
+            <span className="text-2xl font-bold text-rose-500">airbnb</span>
           </Link>
         </div>
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -76,7 +76,7 @@ function Register() {
             </div>
             <button
               type="submit"
-              className="w-full flex justify-center py-3 px-4 text-sm font-medium rounded-lg text-white bg-[#FF385C] hover:bg-[#E61E4D] transition-colors"
+              className="w-full flex justify-center py-3 px-4 text-sm font-medium rounded-lg text-white bg-[#FF385C] hover:bg-rose-700 transition-colors"
             >
               Sign up
             </button>
@@ -93,7 +93,7 @@ function Register() {
             <div className="mt-6 text-center">
               <Link
                 to={`/login`}
-                className="text-sm text-[#FF385C] hover:text-[#E61E4D] font-medium"
+                className="text-sm text-rose-500 hover:text-rose-700 font-medium"
               >
                 Already have an account? Log in
               </Link>
@@ -103,11 +103,11 @@ function Register() {
         <div className="text-center text-sm text-gray-600">
           <p>
             By continuing, you agree to Airbnb's
-            <Link to={``} className="text-[#FF385C] hover:underline">
+            <Link to={``} className="text-rose-500 hover:underline">
               Terms of Service
             </Link>
             and
-            <Link to={``} className="text-[#FF385C] hover:underline">
+            <Link to={``} className="text-rose-500 hover:underline">
               Privacy Policy
             </Link>
           </p>

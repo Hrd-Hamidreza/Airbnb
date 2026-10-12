@@ -78,7 +78,7 @@ function Admin() {
                 <h2 className="text-2xl font-semibold text-gray-900">
                   Users Management
                 </h2>
-                <button className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]">
+                <button className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700">
                   Add New User
                 </button>
               </div>

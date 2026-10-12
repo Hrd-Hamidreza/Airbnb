@@ -15,3 +15,11 @@ export const getPropertiesDataById = async (id) => {
   }
   return data?.data ?? [];
 };
+//! --------------------
+export const getPropertyDataById = async (id) => {
+  const { data, status } = await axiosInstance.get(`properties/${id}`);
+  if (status !== 200) {
+    throw new Error("Server Error");
+  }
+  return data;
+};

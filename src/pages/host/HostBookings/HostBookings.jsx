@@ -98,7 +98,7 @@ function HostBookings() {
                         <td className="px-6 py-4 text-sm text-gray-700">
                           <Link
                             to={`/listDetails`}
-                            className="hover:text-[#FF385C] underline"
+                            className="hover:text-rose-500 underline"
                           >
                             Cozy studio near Pyynikki
                           </Link>
@@ -136,7 +136,7 @@ function HostBookings() {
                         <td className="px-6 py-4 text-sm text-gray-700">
                           <Link
                             to={`/listDetails`}
-                            className="hover:text-[#FF385C] underline"
+                            className="hover:text-rose-500 underline"
                           >
                             Cozy studio near Pyynikki
                           </Link>
@@ -165,7 +165,7 @@ function HostBookings() {
                         <td className="px-6 py-4 text-sm text-gray-700">
                           <Link
                             to={`/listDetails`}
-                            className="hover:text-[#FF385C] underline"
+                            className="hover:text-rose-500 underline"
                           >
                             Modern apartment downtown
                           </Link>

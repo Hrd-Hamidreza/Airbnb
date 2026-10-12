@@ -281,7 +281,7 @@ function ProfileAbout() {
             <div className="flex gap-3 pt-2">
               <button
                 type="submit"
-                className="bg-[#FF385C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#E61E4D] transition-colors"
+                className="bg-[#FF385C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-rose-700 transition-colors"
               >
                 Save
               </button>

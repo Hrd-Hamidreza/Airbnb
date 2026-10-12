@@ -7,7 +7,7 @@ function Head() {
   //! ---------------------------------------- Return
   return (
     <>
-      <div className="flex justify-between items-center w-full">
+      <div className="w-11/12 mx-auto flex justify-between items-center">
         {/* Logo */}
         <Logo />
         {/* Navbar */}

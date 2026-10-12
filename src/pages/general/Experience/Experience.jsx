@@ -1,24 +1,20 @@
 //! ---------------------------------------- Import
-import { OriginalCard, PopularCard, SwiperBox } from "@/components";
+import { ExperiencesCard, MainSwiperBox } from "@/components";
 import { fetchExperiencesData } from "@/services";
 //! ---------------------------------------- Component (Experience)
 function Experience() {
   //! ---------------------------------------- Variables
   const experiencesData = fetchExperiencesData();
-  const componentsCard = {
-    Popular: PopularCard,
-    Original: OriginalCard,
-  };
   //! ---------------------------------------- Return
   return (
     <>
-      <section className="w-full bg-white flex flex-col gap-10 p-10">
+      <section className="w-11/12 mx-auto flex flex-col gap-10">
         <section className="w-full flex flex-col gap-5">
           {experiencesData.map((experience) => (
-            <SwiperBox
+            <MainSwiperBox
               key={experience.id}
               title={experience.title}
-              ComponentCard={componentsCard[experience.category]}
+              ComponentCard={ExperiencesCard}
               {...{ data: experience.data }}
             />
           ))}

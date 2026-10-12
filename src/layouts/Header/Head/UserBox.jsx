@@ -9,7 +9,7 @@ function UserBox() {
       <div className="flex justify-center items-center gap-5">
         <Link
           to={`/host`}
-          className="hidden md:block px-4 py-2 rounded-full hover:bg-gray-100 transition-colors font-semibold text-gray-900"
+          className="hidden md:block rounded-full hover:bg-gray-100 transition-colors font-semibold text-gray-900"
         >
           Become a host
         </Link>

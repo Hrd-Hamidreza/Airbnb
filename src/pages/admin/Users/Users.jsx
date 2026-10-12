@@ -79,7 +79,7 @@ function Users() {
                 <Link
                   to={``}
                   href="#add-user-modal"
-                  className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                  className="px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
                 >
                   Add New User
                 </Link>
@@ -293,7 +293,7 @@ function Users() {
               </Link>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
               >
                 Create User
               </button>
@@ -394,7 +394,7 @@ function Users() {
               </Link>
               <button
                 type="submit"
-                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-[#E61E4D]"
+                className="flex-1 px-4 py-2 bg-[#FF385C] text-white rounded-lg font-semibold hover:bg-rose-700"
               >
                 Save
               </button>

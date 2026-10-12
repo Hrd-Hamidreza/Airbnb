@@ -1,6 +1,6 @@
 //! ---------------------------------------- Import
-//! ---------------------------------------- Component (CardsSkeleton)
-function CardsSkeleton() {
+//! ---------------------------------------- Component (MainCardsSkeleton)
+function MainCardsSkeleton() {
   //! ---------------------------------------- Return
   return (
     <>
@@ -39,4 +39,4 @@ function CardsSkeleton() {
   );
 }
 //! ---------------------------------------- Export
-export default CardsSkeleton;
+export default MainCardsSkeleton;
