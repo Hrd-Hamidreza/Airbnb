@@ -24,7 +24,7 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     //! -------------------- loginSuccess
-    loginSuccess: (state, action) => {
+    login: (state, action) => {
       const { user, access_token, refresh_token } = action.payload;
 
       state.user.userInfo = user ?? null;
@@ -64,4 +64,4 @@ const userSlice = createSlice({
 });
 //! ---------------------------------------- Export
 export default userSlice.reducer;
-export const { loginSuccess, loginFailed, logOut } = userSlice.actions;
+export const { login, logOut } = userSlice.actions;

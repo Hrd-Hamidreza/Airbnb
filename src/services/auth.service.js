@@ -1,5 +1,5 @@
 //! ---------------------------------------- Import
-import { logOutApi, registerApi } from "@/api";
+import { loginApi, logOutApi, registerApi } from "@/api";
 //! ---------------------------------------- Functions
 //! -------------------- registerService
 export async function registerService(payLoad = {}) {
@@ -51,5 +51,30 @@ export async function logOutService() {
     }
   } catch (error) {
     return { success: false, message: error?.response?.message };
+  }
+}
+//! -------------------- loginService
+export async function loginService(payload) {
+  try {
+    const { success, data } = await loginApi(payload);
+    if (success) {
+      return {
+        success: true,
+        data,
+        message: data?.message ?? "Login successfully",
+      };
+    } else {
+      return {
+        success: false,
+        data: null,
+        message: data?.message ?? "Login failed",
+      };
+    }
+  } catch (error) {
+    return {
+      success: false,
+      data: null,
+      message: error?.response?.data?.error?.message ?? "Login failed",
+    };
   }
 }

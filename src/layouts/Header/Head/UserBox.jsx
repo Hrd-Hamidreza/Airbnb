@@ -57,9 +57,9 @@ function userBox() {
     <>
       <div className="flex justify-center items-center gap-5">
         {logOutError?.error && (
-          <p className="fixed right-10 top-10 p-5 bg-red-500 text-white rounded-xl text-center z-51">
-            {logOutError?.message}
-          </p>
+          <div className="fixed right-10 top-10 p-5 bg-red-500 text-white rounded-xl text-center z-51">
+            {logOutError?.message ?? "Registeration Failed"}
+          </div>
         )}
         {user?.userInfo ? (
           <Link
@@ -168,6 +168,9 @@ function userBox() {
                 {user?.userInfo && (
                   <Link
                     to={`/profile`}
+                    onClick={() => {
+                      setMenu(false);
+                    }}
                     className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors "
                   >
                     <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
