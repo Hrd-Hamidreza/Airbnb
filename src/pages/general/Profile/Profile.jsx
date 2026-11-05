@@ -1,9 +1,11 @@
 //! ---------------------------------------- Import
-
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
 //! ---------------------------------------- Component (Profile)
 function Profile() {
+  //! ---------------------------------------- Hook
+  const { user } = useSelector((store) => store.user);
+  //! ---------------------------------------- Return
   return (
     <>
       <div className="max-w-[1760px] mx-auto px-6 py-8">
@@ -70,9 +72,11 @@ function Profile() {
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900">
-                      Demo User
+                      {user?.userInfo?.name}
                     </h3>
-                    <p className="text-sm text-gray-600">demo@example.com</p>
+                    <p className="text-sm text-gray-600">
+                      {user?.userInfo?.email}
+                    </p>
                     <p className="text-xs text-gray-500 mt-1">
                       Joined Jan 2024
                     </p>

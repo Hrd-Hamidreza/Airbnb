@@ -21,6 +21,9 @@ import {
   FaCalendarAlt,
   FaFlag,
   FaFirstAid,
+  FaUser,
+  FaUsers,
+  FaAirbnb,
 } from "react-icons/fa";
 import {
   FaEarthAmericas,
@@ -39,7 +42,7 @@ import {
   MdFreeCancellation,
   MdFeaturedPlayList,
 } from "react-icons/md";
-import { LuServerCog, LuHeater } from "react-icons/lu";
+import { LuServerCog, LuHeater, LuUsers } from "react-icons/lu";
 import { BsStars } from "react-icons/bs";
 import { FcGallery } from "react-icons/fc";
 import { TbAirConditioning, TbAlarmSmoke } from "react-icons/tb";
@@ -49,6 +52,8 @@ import { GiVacuumCleaner, GiMagnifyingGlass, GiPriceTag } from "react-icons/gi";
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
 import { AiFillSafetyCertificate, AiOutlineStop } from "react-icons/ai";
 import { BiSolidWasher, BiSolidDryer } from "react-icons/bi";
+import { CiUser, CiGift, CiLogin, CiLogout } from "react-icons/ci";
+import { TiPlusOutline } from "react-icons/ti";
 import { memo } from "react";
 //! ---------------------------------------- Component (ProjectIcons)
 function ProjectIcons({ type, ...rest }) {
@@ -203,6 +208,33 @@ function ProjectIcons({ type, ...rest }) {
     //! -------------------- first-aid
     case "first-aid":
       return <FaFirstAid {...rest} />;
+    //! -------------------- user1
+    case "user-1":
+      return <FaUser {...rest} />;
+    //! -------------------- user2
+    case "user-2":
+      return <CiUser {...rest} />;
+    //! -------------------- increase-2
+    case "increase-2":
+      return <TiPlusOutline {...rest} />;
+    //! -------------------- users1
+    case "users-1":
+      return <FaUsers {...rest} />;
+    //! -------------------- users2
+    case "users-2":
+      return <LuUsers {...rest} />;
+    //! -------------------- gift
+    case "gift":
+      return <CiGift {...rest} />;
+    //! -------------------- login
+    case "login":
+      return <CiLogin {...rest} />;
+    //! -------------------- logout
+    case "logout":
+      return <CiLogout {...rest} />;
+    //! -------------------- logo
+    case "logo":
+      return <FaAirbnb {...rest} />;
     //! -------------------- default
     default:
       return <MdFeaturedPlayList {...rest} />;

@@ -2,3 +2,4 @@ export * from "@/services/services.service";
 export * from "@/services/experiences.service";
 export * from "@/services/home.service";
 export * from "@/services/property.service";
+export * from "@/services/auth.service";

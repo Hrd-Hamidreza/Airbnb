@@ -14,6 +14,7 @@
 /*! components Layer */
 @layer components {
     @import "./components/active.css";
+    @import "./components/input.css";
 }
 
 /*! utilities Layer */

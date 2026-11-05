@@ -1,18 +1,87 @@
 //! ---------------------------------------- Import
 import { ProjectIcons } from "@/components";
-import { Link } from "react-router-dom";
-//! ---------------------------------------- Component (UserBox)
-function UserBox() {
+import { useAuth } from "@/hooks";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+//! ---------------------------------------- Component (userBox)
+function userBox() {
+  //! ---------------------------------------- Hooks
+  const [menu, setMenu] = useState(false);
+  const [logOutError, setLogOutError] = useState(null);
+  //! --------------------
+  const menuRef = useRef(null);
+  //! --------------------
+  const { pathname } = useLocation();
+  //! --------------------
+  const navigate = useNavigate();
+  //! --------------------
+  const { user, logOutFn } = useAuth();
+  //! ---------------------------------------- Functions
+  //! --------------------
+  function handleMenu(event) {
+    setMenu((pre) => !pre);
+  }
+  //! --------------------
+  async function logOutHandler() {
+    const { success, message } = await logOutFn();
+    if (success) {
+      navigate("/");
+      setMenu(false);
+    } else {
+      setLogOutError({
+        error: true,
+        message: message,
+      });
+    }
+  }
+  //! ---------------------------------------- Hooks
+  useEffect(() => {
+    setMenu(false);
+  }, [pathname]);
+  //! --------------------
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenu(false);
+      }
+    }
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   //! ---------------------------------------- Return
   return (
     <>
       <div className="flex justify-center items-center gap-5">
-        <Link
-          to={`/host`}
-          className="hidden md:block rounded-full hover:bg-gray-100 transition-colors font-semibold text-gray-900"
-        >
-          Become a host
-        </Link>
+        {logOutError?.error && (
+          <p className="fixed right-10 top-10 p-5 bg-red-500 text-white rounded-xl text-center z-51">
+            {logOutError?.message}
+          </p>
+        )}
+        {user?.userInfo ? (
+          <Link
+            to={user?.userInfo?.role === "guest" ? "/profile" : "/host"}
+            className="flex gap-1"
+          >
+            <strong>
+              {String(user?.userInfo?.role).slice(0, 1).toUpperCase() +
+                String(user?.userInfo?.role).slice(1)}
+              :
+            </strong>
+            <h2>{user?.userInfo?.name}</h2>
+          </Link>
+        ) : (
+          <Link
+            to={`/register`}
+            className="hidden md:block rounded-full hover:bg-gray-100 transition-colors font-semibold text-gray-900"
+          >
+            Become a host
+          </Link>
+        )}
+
         <button
           type="button"
           className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors cursor-pointer"
@@ -20,156 +89,135 @@ function UserBox() {
         >
           <ProjectIcons type={"globe"} />
         </button>
-        <div className="relative" data-header-menu>
+        <div ref={menuRef} className="relative" data-header-menu>
           <button
+            onClick={handleMenu}
             type="button"
             data-header-menu-toggle
-            className="p-2 rounded-full bg-gray-200 cursor-pointer hover:bg-gray-300 transition-colors text-xl"
+            className={`p-2 rounded-full ${menu ? "bg-gray-300" : "bg-gray-200"}  cursor-pointer hover:bg-gray-300 transition-colors text-xl`}
             aria-label="Menu"
-            aria-expanded="false"
+            aria-expanded={menu}
           >
             <ProjectIcons type={"menu"} />
           </button>
-          <div
-            data-header-menu-panel
-            className="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50"
-          >
-            <div className="px-4 py-3 border-b border-gray-200">
-              <h3 className="font-semibold text-gray-900">Help Center</h3>
+          {/* Menu */}
+          {menu && (
+            <div
+              data-header-menu-panel
+              className={`absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden z-50`}
+            >
+              {user?.userInfo && (
+                <>
+                  <div className="px-4 py-3">
+                    <h3 className="font-semibold text-gray-900">
+                      {`Welcome ${user?.userInfo?.name}`}
+                    </h3>
+                  </div>
+                  <hr className="border-gray-300" />
+                </>
+              )}
+              <div className="px-4 py-3">
+                <h3 className="font-semibold text-gray-900">Help Center</h3>
+              </div>
+              <hr className="border-gray-300" />
+              <div className="py-2">
+                <Link
+                  to={`/host`}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                    <ProjectIcons type={"user-2"} className={"w-8/12 h-8/12"} />
+                  </div>
+                  <span className="text-sm text-gray-900">Become a host</span>
+                </Link>
+                <Link
+                  to={`/host`}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                    <ProjectIcons
+                      type={"increase-2"}
+                      className={"w-8/12 h-8/12"}
+                    />
+                  </div>
+                  <span className="text-sm text-gray-900">Refer a Host</span>
+                </Link>
+                <Link
+                  to={`/host`}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                    <ProjectIcons
+                      type={"users-2"}
+                      className={"w-8/12 h-8/12"}
+                    />
+                  </div>
+                  <span className="text-sm text-gray-900">Find a co-host</span>
+                </Link>
+                <Link
+                  to={`/host`}
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                    <ProjectIcons type={"gift"} className={"w-8/12 h-8/12"} />
+                  </div>
+                  <span className="text-sm text-gray-900">Gift cards</span>
+                </Link>
+                <hr className="border-gray-300" />
+
+                {user?.userInfo && (
+                  <Link
+                    to={`/profile`}
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors "
+                  >
+                    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                      <ProjectIcons
+                        type={"user-1"}
+                        className={"w-7/12 h-7/12"}
+                      />
+                    </div>
+                    <span className="text-sm text-gray-900">Profile</span>
+                  </Link>
+                )}
+
+                {user?.userInfo ? (
+                  <div
+                    onClick={logOutHandler}
+                    className="group/logout flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors cursor-pointer"
+                  >
+                    <div className="group-hover/logout:bg-red-300 w-10 h-10 rounded-full  flex items-center justify-center flex-shrink-0">
+                      <ProjectIcons
+                        type={"logout"}
+                        className={"w-8/12 h-8/12"}
+                      />
+                    </div>
+                    <span className="group-hover/logout:font-semibold text-sm text-gray-900">
+                      Log out
+                    </span>
+                  </div>
+                ) : (
+                  <Link
+                    to={`/login`}
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                      <ProjectIcons
+                        type={"login"}
+                        className={"w-8/12 h-8/12"}
+                      />
+                    </div>
+                    <span className="text-sm text-gray-900">
+                      Log in or sign up
+                    </span>
+                  </Link>
+                )}
+              </div>
             </div>
-            <div className="py-2">
-              <Link
-                to={`/host`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Become a host</span>
-              </Link>
-              <Link
-                to={`/host`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 4v16m8-8H4"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Refer a Host</span>
-              </Link>
-              <Link
-                to={`/host`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Find a co-host</span>
-              </Link>
-              <Link
-                to={`/host`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Gift cards</span>
-              </Link>
-              <Link
-                to={`/profile`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-t border-gray-200"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Profile</span>
-              </Link>
-              <Link
-                to={`/login`}
-                className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-gray-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                    />
-                  </svg>
-                </div>
-                <span className="text-sm text-gray-900">Log in or sign up</span>
-              </Link>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </>
   );
 }
 //! ---------------------------------------- Export
-export default UserBox;
+export default userBox;

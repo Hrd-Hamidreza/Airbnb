@@ -1,5 +1,6 @@
 //! ---------------------------------------- Import
 import { HomeCard, MainSwiperBox, MainSwiperBoxSkeleton } from "@/components";
+import { queryKeys } from "@/data";
 import { useProperties, useDestinations } from "@/hooks";
 import { NotFound } from "@/pages";
 //! ---------------------------------------- Variables

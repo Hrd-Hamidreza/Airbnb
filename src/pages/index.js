@@ -12,6 +12,9 @@ export { default as Host } from "@/pages/general/Host/Host";
 export { default as PropertyHandler } from "@/pages/general/PropertyDetails/PropertyHandler";
 //! Components
 export { default as PropertyDetails } from "@/pages/general/PropertyDetails/PropertyDetails/PropertyDetails";
+//! Utils
+export * from "@/pages/general/PropertyDetails/PropertyDetails/utils/propertyDetails";
+//! -----
 export { default as PropertyIntroductions } from "@/pages/general/PropertyDetails/PropertyDetails/PropertyIntroductions";
 export { default as PropertyHouseSummary } from "@/pages/general/PropertyDetails/PropertyDetails/PropertyHouseSummary";
 export { default as PropertyHostSummary } from "@/pages/general/PropertyDetails/PropertyDetails/PropertyHostSummary";
@@ -62,9 +65,6 @@ export { default as Payment } from "@/pages/general/Payment/Payment";
 export { default as Profile } from "@/pages/general/Profile/Profile";
 export { default as Register } from "@/pages/general/Register/Register";
 export { default as SearchResult } from "@/pages/general/SearchResult/SearchResult";
-//! Utils
-export * from "@/pages/general/PropertyDetails/PropertyDetails/utils/propertyDetails";
-//! -----
 //! Admin
 export { default as AdminBookings } from "@/pages/Admin/AdminBookings/AdminBookings";
 export { default as AdminMain } from "@/pages/Admin/AdminMain/AdminMain";

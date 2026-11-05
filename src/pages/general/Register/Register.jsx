@@ -1,10 +1,82 @@
 //! ---------------------------------------- Import
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { registerValidation } from "@/validations/auth.validations";
+import { useAuth } from "@/hooks";
+import { useEffect, useState } from "react";
 //! ---------------------------------------- Component (Register)
 function Register() {
+  //! ---------------------------------------- Variables
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm({
+    resolver: yupResolver(registerValidation),
+    mode: "onTouched",
+    reValidateMode: "onChange",
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      rePassword: "",
+    },
+  });
+  //! ---------------------------------------- Hooks
+  const navigate = useNavigate();
+  //! --------------------
+  const [registerError, setRegisterError] = useState({});
+  //! --------------------
+  useEffect(() => {
+    if (!registerError.error) return;
+    const timer = setTimeout(() => {
+      setRegisterError({});
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [registerError]);
+  //! --------------------
+  const { signUpFn } = useAuth();
+  //! ---------------------------------------- Functions
+  async function onSubmit(form) {
+    setRegisterError({});
+
+    const result = await signUpFn({
+      first_name: form.firstName,
+      last_name: form.lastName,
+      email: form.email,
+      password: form.password,
+    });
+
+    if (result?.success) {
+      if (result?.loginRequired) {
+        navigate("/login", { replace: true });
+      } else {
+        navigate("/profile", { replace: true });
+      }
+    } else {
+      setRegisterError({
+        error: true,
+        message: result?.message ?? "Registeration Failed",
+      });
+    }
+  }
+  //! --------------------
+  function handleErrors(message) {
+    return <p className="text-sm text-red-500">{message}</p>;
+  }
+  //! --------------------
+  function handleFirstletter(value) {
+    if (!value.trim()) return "";
+    const firstLetter = value.charAt(0).toUpperCase();
+    const restLetters = value.slice(1).toLowerCase();
+    return firstLetter + restLetters;
+  }
+  //! ---------------------------------------- Return
   return (
     <>
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-md w-full m-auto space-y-8">
         <div className="flex justify-center">
           <Link to={`/register`} className="flex items-center space-x-2">
             <svg
@@ -26,29 +98,49 @@ function Register() {
               Sign up to start exploring
             </p>
           </div>
-          <form className="space-y-6" action="login.html">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+            className="space-y-6"
+          >
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   First name
                 </label>
                 <input
+                  id="firstName"
+                  {...register("firstName", {
+                    onChange: (event) => {
+                      event.target.value = handleFirstletter(
+                        event.target.value,
+                      );
+                    },
+                  })}
                   type="text"
-                  required
                   placeholder="First name"
-                  className="appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="input"
                 />
+                {errors?.firstName && handleErrors(errors?.firstName?.message)}
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Last name
                 </label>
                 <input
+                  id="lastName"
+                  {...register("lastName", {
+                    onChange: (event) => {
+                      event.target.value = handleFirstletter(
+                        event.target.value,
+                      );
+                    },
+                  })}
                   type="text"
-                  required
                   placeholder="Last name"
-                  className="appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                  className="input"
                 />
+                {errors?.lastName && handleErrors(errors?.lastName?.message)}
               </div>
             </div>
             <div>
@@ -56,29 +148,51 @@ function Register() {
                 Email
               </label>
               <input
+                id="email"
+                {...register("email")}
                 type="email"
-                required
                 placeholder="Email"
-                className="appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                className="input"
               />
+              {errors?.email && handleErrors(errors?.email?.message)}
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
               <input
+                id="password"
+                {...register("password")}
                 type="password"
-                required
-                minlength="6"
-                placeholder="Password (min. 6 characters)"
-                className="appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent"
+                placeholder="Password (8-12 Characters)"
+                className="input"
               />
+              {errors?.password && handleErrors(errors?.password?.message)}
             </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Confirm Password
+              </label>
+              <input
+                id="rePassword"
+                {...register("rePassword")}
+                type="password"
+                placeholder="Please confirm your password."
+                className="input"
+              />
+              {errors?.rePassword && handleErrors(errors?.rePassword?.message)}
+            </div>
+            {registerError.error && (
+              <div className="fixed right-10 top-10 p-5 bg-red-500 text-white rounded-xl text-center z-51">
+                {registerError.message ?? "Registeration Failed"}
+              </div>
+            )}
             <button
+              disabled={isSubmitting}
               type="submit"
-              className="w-full flex justify-center py-3 px-4 text-sm font-medium rounded-lg text-white bg-[#FF385C] hover:bg-rose-700 transition-colors"
+              className="w-full flex justify-center py-3 px-4 text-sm font-medium rounded-lg text-white bg-rose-500 hover:bg-rose-700 transition-colors cursor-pointer"
             >
-              Sign up
+              {isSubmitting ? "Creating account..." : "Sign up"}
             </button>
           </form>
           <div className="mt-6">

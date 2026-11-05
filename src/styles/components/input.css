@@ -1,0 +1,3 @@
+.input {
+    @apply appearance-none relative block w-full px-4 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF385C] focus:border-transparent
+}
