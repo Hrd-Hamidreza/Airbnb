@@ -1,7 +1,7 @@
 //! ---------------------------------------- Import
-import { loginSuccess } from "@/features";
-import { logOutService, registerService } from "@/services";
-import { useDispatch, useSelector } from "react-redux";
+import { login } from "@/features";
+import { loginService, logOutService, registerService } from "@/services";
+import { connect, useDispatch, useSelector } from "react-redux";
 import { logOut } from "@/features";
 //! ---------------------------------------- Component (useAuth)
 export function useAuth() {
@@ -19,19 +19,12 @@ export function useAuth() {
     }
 
     if (result?.data && result.success) {
-      const { user, access_token, refresh_token } = result?.data;
-
-      dispatch(
-        loginSuccess({
-          user,
-          access_token,
-          refresh_token,
-        }),
-      );
+      dispatch(login(result?.data));
     }
 
     return result;
   };
+
   //! -------------------- logOut
   const logOutFn = async () => {
     const { success, message } = await logOutService();
@@ -42,6 +35,22 @@ export function useAuth() {
       return { success: false, message };
     }
   };
+
+  //! -------------------- logOut
+  const loginFn = async (payload = {}) => {
+    const { success, data, message } = await loginService(payload);
+    if (success) {
+      dispatch(login(data));
+      return {
+        success: true,
+        message,
+        role: data?.user?.role,
+      };
+    } else {
+      return { success: false, message };
+    }
+  };
+
   //! -------------------- Return
-  return { signUpFn, user, logOutFn };
+  return { signUpFn, user, logOutFn, loginFn };
 }

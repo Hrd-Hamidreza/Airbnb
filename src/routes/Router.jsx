@@ -40,6 +40,7 @@ import {
   ProfileConnectionsDetails,
   Trips,
 } from "@/pages";
+import { AuthGuard, LoginGuard, RegisterGaurd } from "@/utils";
 //! -------------------- Structure
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 //! ---------------------------------------- Component (Router)
@@ -53,8 +54,22 @@ function Router() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/services" element={<Services />} />
           <Route path="/property-details/:id" element={<PropertyHandler />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/register"
+            element={
+              <RegisterGaurd>
+                <Register />
+              </RegisterGaurd>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <LoginGuard>
+                <Login />
+              </LoginGuard>
+            }
+          />
           <Route path="/payment" element={<Payment />} />
           <Route path="/searchResult" element={<SearchResult />} />
           {/* Admin */}
@@ -81,7 +96,14 @@ function Router() {
             <Route path="review" element={<Review />} />
           </Route>
           {/* Profile */}
-          <Route path="/profile" element={<Profile />}>
+          <Route
+            path="/profile"
+            element={
+              <AuthGuard>
+                <Profile />
+              </AuthGuard>
+            }
+          >
             <Route path="favorites" element={<Favorites />} />
             <Route path="mainProfile" element={<MainProfile />} />
             <Route path="profileAbout" element={<ProfileAbout />} />

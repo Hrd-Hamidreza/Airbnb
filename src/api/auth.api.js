@@ -17,3 +17,10 @@ export async function logOutApi() {
   });
   return data;
 }
+//! -------------------- loginApi
+export async function loginApi(payload) {
+  const { data } = await axiosInstance.post("auth/login", payload, {
+    skipAuth: true,
+  });
+  return data;
+}

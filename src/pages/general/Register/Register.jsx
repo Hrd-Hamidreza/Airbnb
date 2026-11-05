@@ -182,9 +182,9 @@ function Register() {
               />
               {errors?.rePassword && handleErrors(errors?.rePassword?.message)}
             </div>
-            {registerError.error && (
+            {registerError?.error && (
               <div className="fixed right-10 top-10 p-5 bg-red-500 text-white rounded-xl text-center z-51">
-                {registerError.message ?? "Registeration Failed"}
+                {registerError?.message ?? "Registeration Failed"}
               </div>
             )}
             <button

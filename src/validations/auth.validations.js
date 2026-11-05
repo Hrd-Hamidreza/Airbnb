@@ -1,6 +1,7 @@
 //! ---------------------------------------- Import
 import * as yup from "yup";
 //! ---------------------------------------- Variables
+//! --------------------
 export const registerValidation = yup.object({
   firstName: yup.string().trim().required("Please enter your first name."),
   lastName: yup.string().trim().required("Please enter your last name."),
@@ -21,4 +22,13 @@ export const registerValidation = yup.object({
       [yup.ref("password")],
       "Password and confirm password do not match.",
     ),
+});
+//! --------------------
+export const loginValidation = yup.object({
+  email: yup
+    .string()
+    .trim()
+    .required("Please enter your email.")
+    .email("Please enter valid email."),
+  password: yup.string().required("Please enter your password."),
 });
